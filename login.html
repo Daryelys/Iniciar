@@ -1,0 +1,74 @@
+<!-- Declaración del tipo de documento - Indica que es un documento HTML5 -->
+<!DOCTYPE html>
+<!-- Etiqueta raíz del documento - 'lang="en"' define el idioma inglés -->
+<html lang="en">
+
+<!-- Sección HEAD - Contiene metadatos y recursos no visibles -->
+<head>
+  <!-- Define la codificación de caracteres como UTF-8 (soporta acentos, ñ, etc.) -->
+  <meta charset="UTF-8">
+  
+  <!-- Configuración para diseño responsive:
+       width=device-width: usa el ancho del dispositivo
+       initial-scale=1.0: zoom inicial al 100% -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Título que aparece en la pestaña del navegador -->
+  <title>Iniciar sesión</title>
+  
+  <!-- Enlace al archivo CSS que contiene los estilos visuales -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Enlace al archivo JavaScript con funcionalidad:
+       'defer' hace que se ejecute después de cargar el HTML -->
+  <script src="login.js" defer></script>
+</head>
+
+<!-- Sección BODY - Contiene todo el contenido visible -->
+<body>
+  <!-- Etiqueta MAIN - Contenido principal de la página (semántica HTML5) -->
+  <main>
+    <!-- Contenedor DIV para el formulario (usado para estilos CSS) -->
+    <div class="form-container">
+      
+      <!-- Título principal de la página -->
+      <h1>Iniciar sesión</h1>
+   
+      <!-- FORM - Formulario con ID para manipulación con JavaScript -->
+      <form id="login-form">
+        
+        <!-- LABEL para campo usuario (accesibilidad):
+             'for="user"' lo asocia al input con id="user"
+             'class="sr-only"' lo oculta visualmente (solo para lectores pantalla) -->
+        <label for="user" class="sr-only">usuario</label>
+        
+        <!-- INPUT para nombre de usuario:
+             'type="text"' campo de texto normal
+             'name="user"' nombre para enviar datos al servidor
+             'id="user"' identificador único
+             'placeholder' texto de ejemplo -->
+        <input type="text" name="user" id="user" placeholder="Nombre de usuario">
+        
+        <!-- LABEL para campo contraseña (similar al anterior) -->
+        <label for="password" class="sr-only">Password</label>
+        
+        <!-- INPUT para contraseña:
+             'type="password"' oculta los caracteres ingresados -->
+        <input type="password" name="password" id="password" placeholder="Contraseña">
+        
+        <!-- BOTÓN para enviar el formulario:
+             'type="submit"' envía los datos del formulario -->
+        <button type="submit">Iniciar sesión</button>
+        
+        <!-- Párrafo para mensajes de error:
+             'class="error escondido"' - estilos para error y estado inicial oculto -->
+        <p class="error escondido">Error al iniciar sesión</p>
+      </form>
+      
+      <!-- Enlace para redirección a registro:
+           'href' apunta a la página de registro -->
+      <p>¿Todavía no tienes una cuenta? - <a href="/app/pages/register.html">Registrate</a></p>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,80 @@
+html {
+  
+    img {
+  --r: 0px; /* radius */
+  --s: 0px; /* size of the inner curve */
+  
+  border-radius: var(--r);
+  --_m:/calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 80%,#0000 72%) no-repeat;
+  mask:
+    right calc(var(--s) + var(--r)) top 0 var(--_m),
+    right calc(var(--s) + var(--r)) var(--_m),
+    radial-gradient(var(--s) at 100% 0,#0000 99%,#000 calc(100% + 1px)) 
+     calc(-1*var(--r)) var(--r) no-repeat,
+    conic-gradient(at calc(100% - var(--s) - 2*var(--r)) calc(var(--s) + 2*var(--r)),
+     #0000 25%,#141313 0);
+}
+    --h: 100svh; /* height */
+    height: var(--h);
+    width: 100%;
+    overflow: hidden;
+    }
+body{
+ background-image: url("https://universidadesgratuitas.com/wp-content/uploads/2020/02/UNEFA-sede-caracas.jpg.");
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+  font-size: larger;
+}
+
+.form-container{
+  width: 500px;
+  background-color: rgb(208, 221, 220);
+  border-radius: 10px;
+  padding: 50px
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form+p, form p {
+  text-align: center;
+}
+
+input, button{
+  border-radius: 4px;
+  border: unset;
+  padding: 15px 30px;
+  font-size: larger;
+}
+
+button{
+  background-color: #6495ed;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.error{
+  color: rgb(231, 24, 24);
+}
+
+.escondido{
+  display: none;
+}
+
+.sr-only{
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}

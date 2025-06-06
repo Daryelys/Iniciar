@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Declaración del tipo de documento (HTML5) -->
+<html lang="en">
+<!-- Etiqueta raíz del documento, especifica idioma inglés -->
+
+<head>
+  <!-- Sección de metadatos y recursos del documento -->
+  <meta charset="UTF-8">
+  <!-- Define la codificación de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Configura la vista para dispositivos móviles -->
+  <title>Registro</title>
+  <!-- Título que aparece en la pestaña del navegador -->
+  
+  <link rel="stylesheet" href="style.css">
+  <!-- Enlace al archivo CSS para estilos -->
+  <script src="register.js" defer></script>
+  <!-- Enlace al archivo JavaScript con atributo defer para cargar después del HTML -->
+</head>
+
+<body>
+  <!-- Cuerpo visible de la página web -->
+  <main>
+    <!-- Contenido principal de la página -->
+    <div class="form-container">
+      <!-- Contenedor del formulario -->
+      <h1>Crear cuenta</h1>
+      <!-- Título principal del formulario -->
+  
+      <form id="register-form">
+        <!-- Formulario con ID para manipulación JS -->
+        
+        <!-- Campo de nombre de usuario -->
+        <label for="user" class="sr-only">User</label>
+        <!-- Etiqueta accesible para screen readers (oculta visualmente) -->
+        <input type="text" name="user" id="user" placeholder="Nombre de usuario">
+        <!-- Campo de entrada de texto -->
+        
+        <!-- Campo de email -->
+        <label for="email" class="sr-only">Email</label>
+        <input type="email" name="email" id="email" placeholder="Correo electrónico">
+        <!-- Campo específico para emails con validación automática -->
+        
+        <!-- Campo de contraseña -->
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" name="password" id="password" placeholder="Contraseña">
+        <!-- Campo de contraseña (el texto se oculta al escribir) -->
+        
+        <!-- Botón de envío del formulario -->
+        <button type="submit">Iniciar sesión</button>
+        <!-- Nota: El texto del botón debería ser "Registrarse" para coincidir con el propósito del formulario -->
+        
+        <!-- Mensaje de error (inicialmente oculto) -->
+        <p class="error escondido"> Error al registrarse </p>
+        <!-- Se mostrará mediante JavaScript cuando ocurra un error -->
+        
+      </form>
+      
+      <!-- Enlace para usuarios registrados -->
+      <p>¿Ya estás registrado? - <a href="/">Crear cuenta</a></p>
+      <!-- Nota: El texto del enlace debería ser "Iniciar sesión" para coherencia -->
+    </div>
+  </main>
+</body>
+</html>
